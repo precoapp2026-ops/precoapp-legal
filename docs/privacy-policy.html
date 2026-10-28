@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade – PreçoApp</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 20px 60px; color: #1a1a1a; line-height: 1.6; }
+  h1 { font-size: 1.6em; margin-top: 0; }
+  h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+  .atualizado { color: #666; font-size: 0.9em; margin-bottom: 2em; }
+  ul { padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; font-size: 0.95em; }
+  th { background: #f5f5f5; }
+  .destaque { background: #fff8e1; border-left: 4px solid #f5a623; padding: 12px 16px; margin: 1.5em 0; }
+  a { color: #0b61d6; }
+</style>
+</head>
+<body>
+
+<h1>Política de Privacidade — PreçoApp</h1>
+<p class="atualizado">Última atualização: 28 de outubro de 2026</p>
+
+<p>Esta Política de Privacidade descreve como o <strong>PreçoApp</strong> ("o aplicativo", "nós") coleta, usa, armazena e protege os dados dos usuários. Ao usar o PreçoApp, você concorda com os termos descritos aqui.</p>
+
+<h2>1. Quem somos</h2>
+<p>O PreçoApp é desenvolvido e mantido por Daniel Soares Teixeira, desenvolvedor independente. Contato: <a href="mailto:precoapp2026@gmail.com">precoapp2026@gmail.com</a>.</p>
+
+<h2>2. Dados que coletamos</h2>
+<table>
+<tr><th>Dado</th><th>Finalidade</th><th>Onde fica armazenado</th></tr>
+<tr><td>Conta de login (e-mail e identificador de usuário)</td><td>Autenticação, associar preços enviados à comunidade ao autor, permitir backup na nuvem</td><td>Firebase Authentication (Google)</td></tr>
+<tr><td>Localização aproximada</td><td>Calcular a distância entre você e os supermercados/atacados cadastrados</td><td>Processada no dispositivo; coordenadas de estabelecimentos cadastrados pela comunidade podem ser armazenadas na nuvem</td></tr>
+<tr><td>Câmera</td><td>Escanear código de barras, ler preços em etiquetas (OCR) e tirar fotos de produtos cadastrados por você</td><td>Fotos ficam armazenadas localmente no seu dispositivo. Se você ativa o backup na nuvem (recurso Premium), as fotos também são enviadas ao Firebase Storage</td></tr>
+<tr><td>Microfone</td><td>Busca de produtos por comando de voz</td><td>O áudio é processado pelo serviço de reconhecimento de voz do Google/Android para conversão em texto e não é armazenado pelo PreçoApp após a busca</td></tr>
+<tr><td>Preços e produtos cadastrados por você</td><td>Exibir comparações de preço e alimentar a seção "Preços da comunidade" (recurso Premium)</td><td>Banco de dados local (SQLite) no seu dispositivo; preços compartilhados com a comunidade ficam no Firebase Firestore, associados ao seu identificador de usuário (uid)</td></tr>
+<tr><td>Backup de dados</td><td>Permitir restaurar seus produtos e listas em caso de troca de aparelho (recurso Premium)</td><td>Firebase Firestore, vinculado à sua conta</td></tr>
+<tr><td>Dados de compra (Premium)</td><td>Validar o desbloqueio do recurso Premium</td><td>Processado pelo Google Play Billing e RevenueCat — o PreçoApp nunca recebe nem armazena dados de cartão de crédito</td></tr>
+</table>
+
+<div class="destaque">
+O PreçoApp <strong>não coleta nem armazena dados de pagamento</strong> (número de cartão, CVV, etc.). Todas as compras são processadas diretamente pelo Google Play Billing, via RevenueCat.
+</div>
+
+<h2>3. Como usamos seus dados</h2>
+<ul>
+  <li>Exibir comparações de preços entre supermercados e atacados próximos a você;</li>
+  <li>Permitir que você cadastre produtos e preços, inclusive compartilhando-os com outros usuários na seção "Preços da comunidade" (recurso Premium);</li>
+  <li>Fazer backup e restauração dos seus dados entre dispositivos (recurso Premium);</li>
+  <li>Melhorar a precisão das buscas (texto e voz);</li>
+  <li>Validar o desbloqueio de recursos pagos (Premium).</li>
+</ul>
+<p>Não vendemos nem compartilhamos seus dados pessoais com terceiros para fins de publicidade.</p>
+
+<h2>4. Compartilhamento com terceiros</h2>
+<p>Utilizamos os seguintes serviços de terceiros, que processam dados em nosso nome sob suas próprias políticas de privacidade:</p>
+<ul>
+  <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage) — armazenamento de conta, backup (incluindo fotos de produtos) e preços da comunidade;</li>
+  <li><strong>RevenueCat e Google Play Billing</strong> — processamento da compra do recurso Premium;</li>
+  <li><strong>Open Food Facts</strong> — ao escanear um código de barras, o código é consultado nessa base de dados aberta para sugerir automaticamente o nome e a imagem do produto;</li>
+  <li><strong>Reconhecimento de voz do Google/Android</strong> — processa o áudio captado pelo microfone para converter sua busca falada em texto.</li>
+</ul>
+
+<h2>5. Armazenamento local vs. nuvem</h2>
+<p>A maior parte dos seus dados (produtos cadastrados, histórico de preços, listas de compra) fica armazenada <strong>localmente no seu dispositivo</strong>, em um banco de dados SQLite. Apenas quem ativa o recurso Premium de backup na nuvem, ou opta por compartilhar um preço com a comunidade, tem esses dados específicos enviados ao Firebase.</p>
+
+<h2>6. Exclusão de conta e de dados</h2>
+<p>Você pode solicitar a exclusão da sua conta e de todos os dados associados a ela (backup na nuvem e identificação como autor de preços enviados à comunidade) a qualquer momento, por dois caminhos:</p>
+<ul>
+  <li><strong>Dentro do aplicativo:</strong> acesse Configurações → Conta → Excluir minha conta. A exclusão é imediata e remove seu backup na nuvem e desvincula seu identificador dos preços que você enviou à comunidade.</li>
+  <li><strong>Pela web:</strong> envie uma solicitação de exclusão para <a href="mailto:precoapp2026@gmail.com?subject=Solicitação de exclusão de conta - PreçoApp">precoapp2026@gmail.com</a>, informando o e-mail usado no cadastro. O prazo de atendimento é de até 15 dias úteis.</li>
+</ul>
+<p>Dados armazenados apenas localmente no seu dispositivo (fora do backup na nuvem) são removidos imediatamente ao desinstalar o aplicativo.</p>
+
+<h2>7. Seus direitos</h2>
+<p>Em conformidade com a Lei Geral de Proteção de Dados (LGPD), você tem direito a:</p>
+<ul>
+  <li>Confirmar a existência de tratamento dos seus dados;</li>
+  <li>Acessar, corrigir ou solicitar a exclusão dos seus dados;</li>
+  <li>Revogar o consentimento dado anteriormente;</li>
+  <li>Solicitar a portabilidade dos seus dados.</li>
+</ul>
+<p>Para exercer qualquer um desses direitos, entre em contato pelo e-mail <a href="mailto:precoapp2026@gmail.com">precoapp2026@gmail.com</a>.</p>
+
+<h2>8. Segurança</h2>
+<p>Adotamos medidas técnicas para proteger seus dados, incluindo regras de acesso no banco de dados em nuvem (Firestore) que impedem leitura ou escrita indevida por outros usuários, e o uso de autenticação para qualquer funcionalidade que envolva dados pessoais.</p>
+
+<h2>9. Crianças e adolescentes</h2>
+<p>O PreçoApp não é direcionado a menores de 18 anos e não coleta intencionalmente dados de crianças.</p>
+
+<h2>10. Alterações nesta política</h2>
+<p>Esta política pode ser atualizada periodicamente. A data da última atualização está sempre indicada no topo desta página. Mudanças significativas serão comunicadas dentro do aplicativo.</p>
+
+<h2>11. Contato</h2>
+<p>Dúvidas sobre esta Política de Privacidade ou sobre o tratamento dos seus dados podem ser enviadas para: <a href="mailto:precoapp2026@gmail.com">precoapp2026@gmail.com</a></p>
+
+</body>
+</html>
